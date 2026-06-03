@@ -2,13 +2,14 @@
 <html lang="es-SV" dir="ltr">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Pequeño videojuego 3d de primera persona" />
+        <meta name="description" content="Pequeño videojuego 3D de primera persona" />
         <meta name="keywords" content="canvas,html,ufg,estudiantes,2026,franz,alexander,lara,arevalo" />
         <meta name="author" content="Franz Alexander Lara Arevalo" />
-        <meta name="copyright" content="2026 samp" />
+        <meta name="copyright" content="2026 FALA" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Videojuego de primera persona, franz alexander lara arevalo</title>
+        <title>Franz Alexander Lara Arévalo, videojuego primera persona</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="manifest" href="manifest.json" />
     </head>
     <body>
         <div id="blocker">
@@ -22,7 +23,7 @@
                         <br />
                         Click izquierdo - Disparar
                         <br />
-                        Barra espaciadora - Disparar
+                        Barra espaceadora - Disparar
                         <br />
                         M - reproducir/pausar audio
                     </p>
@@ -31,8 +32,13 @@
         </div>
         <img id="crosshair" src="media/reticle.png" alt="Crosshair" />
         <script src="https://cdn.jsdelivr.net/npm/three@latest/build/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/OrbiControls.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/OrbitControls.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/PointerLockControls.js"></script>
         <script type="module" src="js/script.js"></script>
+        <script>
+            if('serviceWorker' in navigator){
+                navigator.serviceWorker.register('sw.js',{scope:'./'});
+            }
+        </script>
     </body>
 </html>
